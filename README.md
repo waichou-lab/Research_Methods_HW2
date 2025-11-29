@@ -101,11 +101,11 @@ SVD 分解
 ![image](image/fg21.jpg)  
 奇異值分解  
 $A^T A = [34]$，奇異值 $\sigma_1 = \sqrt{34}, \sigma_2 = 0$  
-右奇異向量：$$V = [1]$$  
+右奇異向量：$V = [1]$  
 
 左奇異向量：  
-$$\vec{u_1} = A / \sqrt{34} = \begin{pmatrix} -5/\sqrt{34} \ 3/\sqrt{34} \end{pmatrix}$$  
-$$\vec{u_2} = \begin{pmatrix} 3/\sqrt{34} \ 5/\sqrt{34} \end{pmatrix}$$（正交向量)  
+$\vec{u_1} = A / \sqrt{34} = \begin{pmatrix} -5/\sqrt{34} \ 3/\sqrt{34} \end{pmatrix}$  
+$\vec{u_2} = \begin{pmatrix} 3/\sqrt{34} \ 5/\sqrt{34} \end{pmatrix}$（正交向量)  
 
 SVD 分解  
 ![image](image/fg22.jpg)  
