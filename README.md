@@ -111,6 +111,8 @@ $u_2 = \begin{pmatrix} 3/\sqrt{34} \ 5/\sqrt{34} \end{pmatrix}$（正交向量)
 
 SVD 分解  
 ![image](image/fg22.jpg)  
+條件數  
+![image](image/fg23.jpg)  
 ## 問題 7.10：潛在語義分析
 (a) 矩陣解釋  
 $XX^T$：
@@ -121,16 +123,16 @@ $n \times n$ 矩陣，條目 $(i,j)$ 表示文檔 $i$ 和文檔 $j$ 的單詞向
 
 (b) 最佳 k 維逼近  
 根據 Eckart-Young 定理，對 $X$ 進行 SVD：  
-![image](image/fg23.jpg)  
-保留前 $k$ 個奇異值，最佳逼近為：  
 ![image](image/fg24.jpg)  
+保留前 $k$ 個奇異值，最佳逼近為：  
+![image](image/fg25.jpg)  
 其中 $U_k$ 是 $U$ 的前 $k$ 列，這些列向量是 $\mathbb{R}^m$ 中的 $k$ 個向量，在 Frobenius 範數下最好地逼近文檔空間。  
 
 (c) 典型相關分析  
 最大化：  
-![image](image/fg25.jpg)  
-令 $C = X_1 X_2^T$，計算 SVD：  
 ![image](image/fg26.jpg)  
+令 $C = X_1 X_2^T$，計算 SVD：  
+![image](image/fg27.jpg)  
 解為：  
 
 $v_1 = U$ 的第一列  
