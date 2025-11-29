@@ -3,17 +3,23 @@
 ## 問題 1 (來自圖2)
 
 **題目原文：**
-**Example 5.2** (QR factorization).: Suppose we construct a matrix whose columns are $\vec{v}_{1}$, $\vec{v}_{2}$, and $\vec{v}_{3}$ from Example 5.1:
+**Example 5.2** (QR factorization).: Suppose we construct a matrix whose columns are $\vec{v}\_{1}$, $\vec{v}\_{2}$, and $\vec{v}\_{3}$ from Example 5.1:
 
-$$A\equiv\left(\begin{array}{ccc}1&1&1\\ 0&1&1\\ 0&1&0\end{array}\right).$$
+$$
+A\equiv\left(\begin{array}{ccc}1&1&1\\\\ 0&1&1\\\\ 0&1&0\end{array}\right)
+$$
 
 The output of Gram-Schmidt orthogonalization can be encoded in the matrix
 
-$$Q\equiv\left(\begin{array}{ccc}1&0&0\\ 0&1/\sqrt{2}&1/\sqrt{2}\\ 0&1/\sqrt{2}&-1/\sqrt{2}\end{array}\right).$$
+$$
+Q\equiv\left(\begin{array}{ccc}1&0&0\\\\ 0&1/\sqrt{2}&1/\sqrt{2}\\\\ 0&1/\sqrt{2}&-1/\sqrt{2}\end{array}\right)
+$$
 
 We can obtain the upper-triangular matrix $R$ in the QR factorization two different ways. First, we can compute $R$ after the fact using a product:
 
-$$R=Q^{\top}A=\left(\begin{array}{ccc}1&0&0\\ 0&1/\sqrt{2}&1/\sqrt{2}\\ 0&1/\sqrt{2}&-1/\sqrt{2}\end{array}\right)^{\top}\left(\begin{array}{ccc}1&1&1\\ 0&1&1\\ 0&1&0\end{array}\right)=\left(\begin{array}{ccc}1&1&1\\ 0&\sqrt{2}&1/\sqrt{2}\\ 0&0&1/\sqrt{2}\end{array}\right).$$
+$$
+R=Q^{\top}A=\left(\begin{array}{ccc}1&0&0\\\\ 0&1/\sqrt{2}&1/\sqrt{2}\\\\ 0&1/\sqrt{2}&-1/\sqrt{2}\end{array}\right)^{\top}\left(\begin{array}{ccc}1&1&1\\\\ 0&1&1\\\\ 0&1&0\end{array}\right)=\left(\begin{array}{ccc}1&1&1\\\\ 0&\sqrt{2}&1/\sqrt{2}\\\\ 0&0&1/\sqrt{2}\end{array}\right)
+$$
 
 As expected, $R$ is upper triangular.
 
@@ -31,11 +37,11 @@ Suppose $A,B\in\mathbb{R}^{n\times n}$ are symmetric and positive definite.
 
 2. (b)Do most matrices have unique square roots? Why or why not?
 
-3. (c)We can define the _exponential_ of $A$ as $e^{A}\equiv\sum_{k=0}^{\infty}\frac{1}{k!}A^{k}$; this sum is unconditionally convergent (you do not have to prove this!). Write an alternative expression for $e^{A}$ in terms of the eigenvectors and eigenvalues of $A$.
+3. (c)We can define the *exponential* of $A$ as $e^{A}\equiv\sum_{k=0}^{\infty}\frac{1}{k!}A^{k}$; this sum is unconditionally convergent (you do not have to prove this!). Write an alternative expression for $e^{A}$ in terms of the eigenvectors and eigenvalues of $A$.
 
 4. (d)If $AB=BA$, show $e^{A+B}=e^{A}e^{B}$.
 
-5. (e)Show that the ordinary differential equation $\vec{y}\,^{\prime}(t)=-A\vec{y}$ with $\vec{y}(0)=\vec{y}_{0}$ for some $\vec{y}_{0}\in\mathbb{R}^{n}$ is solved by $\vec{y}(t)=e^{-At}\vec{y}_{0}$. What happens as $t\to\infty$
+5. (e)Show that the ordinary differential equation $\vec{y}\,^{\prime}(t)=-A\vec{y}$ with $\vec{y}(0)=\vec{y}\_{0}$ for some $\vec{y}\_{0}\in\mathbb{R}^{n}$ is solved by $\vec{y}(t)=e^{-At}\vec{y}\_{0}$. What happens as $t\to\infty$
 
 **中文解答：**
 
@@ -72,13 +78,17 @@ Suppose $A,B\in\mathbb{R}^{n\times n}$ are symmetric and positive definite.
 ## 問題 4 (來自圖5)
 
 **題目原文：**
-7.10 ("Latent semantic analysis," [35]) In this problem, we explore the basics of _latent semantic analysis_, used in natural language processing to analyze collections of documents.
+7.10 ("Latent semantic analysis," [35]) In this problem, we explore the basics of *latent semantic analysis*, used in natural language processing to analyze collections of documents.
 
-* (a)Suppose we have a dictionary of $m$ words and a collection of $n$ documents. We can write an _occurrence matrix_ $X\in\mathbb{R}^{m\times n}$ whose entries $x_{ij}$ are equal to the number of times word $i$ appears in document $j$. Propose interpretations of the entries of $XX^{\top}$ and $X^{\top}X$.
+* (a)Suppose we have a dictionary of $m$ words and a collection of $n$ documents. We can write an *occurrence matrix* $X\in\mathbb{R}^{m\times n}$ whose entries $x_{ij}$ are equal to the number of times word $i$ appears in document $j$. Propose interpretations of the entries of $XX^{\top}$ and $X^{\top}X$.
 
-* (b)Each document in $X$ is represented using a point in $\mathbb{R}^{m}$, where $m$ is potentially large. Suppose for efficiency and robustness to noise, we would prefer to use representations in $\mathbb{R}^{k}$, for some $k\ll\min\{m,n\}$. Apply Theorem 7.1 to propose a set of $k$ vectors in $\mathbb{R}^{m}$ that best approximates the full space of documents with respect to the Frobenius norm.
+* (b)Each document in $X$ is represented using a point in $\mathbb{R}^{m}$, where $m$ is potentially large. Suppose for efficiency and robustness to noise, we would prefer to use representations in $\mathbb{R}^{k}$, for some $k\ll\min\\{m,n\\}$. Apply Theorem 7.1 to propose a set of $k$ vectors in $\mathbb{R}^{m}$ that best approximates the full space of documents with respect to the Frobenius norm.
 
-* (c)In _cross-language_ applications, we might have a collection of $n$ documents translated into two different languages, with $m_{1}$ and $m_{2}$ words, respectively. Then, we can write two occurrence matrices $X_{1}\in\mathbb{R}^{m_{1}\times n}$ and $X_{2}\in\mathbb{R}^{m_{2}\times n}$. Since we do not know which words in the first language correspond to which words in the second, the columns of these matrices are in correspondence but the rows are not. One way to find similar phrases in the two languages is to find vectors $\vec{v}_{1}\in\mathbb{R}^{m_{1}}$ and $\vec{v}_{2}\in\mathbb{R}^{m_{2}}$ such that $X_{1}^{\top}\vec{v}_{1}$ and $X_{2}^{\top}\vec{v}_{2}$ are similar. To do so, we can solve a _canonical correlation_ problem: $$\max_{\vec{v}_{1},\vec{v}_{2}}\frac{(X_{1}^{\top}\vec{v}_{1})\cdot(X_{2}^{\top}\vec{v}_{2})}{\|\vec{v}_{1}\|_{2}\|\vec{v}_{2}\|_{2}}.$$ Show how this maximization can be solved using SVD machinery.
+* (c)In *cross-language* applications, we might have a collection of $n$ documents translated into two different languages, with $m_{1}$ and $m_{2}$ words, respectively. Then, we can write two occurrence matrices $X_{1}\in\mathbb{R}^{m_{1}\times n}$ and $X_{2}\in\mathbb{R}^{m_{2}\times n}$. Since we do not know which words in the first language correspond to which words in the second, the columns of these matrices are in correspondence but the rows are not. One way to find similar phrases in the two languages is to find vectors $\vec{v}\_{1}\in\mathbb{R}^{m_{1}}$ and $\vec{v}\_{2}\in\mathbb{R}^{m_{2}}$ such that $X_{1}^{\top}\vec{v}\_{1}$ and $X_{2}^{\top}\vec{v}\_{2}$ are similar. To do so, we can solve a *canonical correlation* problem: 
+$$
+\max_{\vec{v}\_{1},\vec{v}\_{2}}\frac{(X_{1}^{\top}\vec{v}\_{1})\cdot(X_{2}^{\top}\vec{v}\_{2})}{\|\vec{v}\_{1}\|\_{2}\|\vec{v}\_{2}\|\_{2}}
+$$
+Show how this maximization can be solved using SVD machinery.
 
 **中文解答：**
 
@@ -99,80 +109,3 @@ Suppose $A,B\in\mathbb{R}^{n\times n}$ are symmetric and positive definite.
 ## 問題 5 (來自圖6)
 
 **題目原文：**
-function Modified-Gram-Schmidt($\vec{v}_{1},\vec{v}_{2},\ldots,\vec{v}_{k}$)  $\triangleright$ Computes an orthonormal basis $\hat{a}_{1},\ldots,\hat{a}_{k}$ for span $\{\vec{v}_{1},\ldots,\vec{v}_{k}\}$  $\triangleright$ Assumes $\vec{v}_{1},\ldots,\vec{v}_{k}$ are linearly independent.
-
-for $i\leftarrow 1,2,\ldots,k$  $\hat{a}_{i}\leftarrow\vec{v}_{i}/\|\vec{v}_{i}\|_{2}$  $\triangleright$ Normalize the current vector and store in the basis
-
-for $j\leftarrow i+1,i+2,\ldots,k$  $\vec{v}_{j}\leftarrow\vec{v}_{j}-(\vec{v}_{j}\cdot\hat{a}_{i})\hat{a}_{i}$  $\triangleright$ Project $\hat{a}_{i}$ out of the remaining vectors
-
-return $\{\hat{a}_{1},\ldots,\hat{a}_{k}\}$
-
-Figure 5.6: The modified Gram-Schmidt algorithm.
-
-**中文解答：**
-修改的Gram-Schmidt算法是對經典Gram-Schmidt正交化算法的改進，主要目的是提高數值穩定性。關鍵改進在於：
-
-1. **立即投影**：一旦計算出新的正交基向量$\hat{a}_i$，立即將其從所有剩餘的向量中投影出去，而不是等到所有基向量都計算完畢。
-
-2. **減少誤差積累**：這種逐步投影的方式減少了捨入誤差的積累，因為每次只處理一個方向上的投影。
-
-3. **相同數學結果**：在沒有捨入誤差的理想情況下，修改的Gram-Schmidt與經典算法產生相同的結果。
-
-4. **更好的穩定性**：在實際數值計算中，修改的算法通常比經典算法更穩定，特別是在處理接近線性相關的向量組時。
-
----
-
-## 問題 6 (來自圖7)
-
-**題目原文：**
-7.3 Provide the SVD and condition number with respect to $\|\cdot\|_2$ of the following matrices.
-
-(a)  
-$$\begin{pmatrix}
-0 & 0 & 1 \\
-0 & \sqrt{2} & 0 \\
-\sqrt{3} & 0 & 0
-\end{pmatrix}$$
-
-(b)  
-$$\begin{pmatrix}
--5 \\
-3
-\end{pmatrix}$$
-
-**中文解答：**
-
-(a) 對於矩陣：
-$$\begin{pmatrix}
-0 & 0 & 1 \\
-0 & \sqrt{2} & 0 \\
-\sqrt{3} & 0 & 0
-\end{pmatrix}$$
-
-這是一個對角線上有元素但排列不同的矩陣。我們可以通過觀察發現其SVD分解：
-
-奇異值：$\sigma_1 = \sqrt{3}, \sigma_2 = \sqrt{2}, \sigma_3 = 1$
-
-左奇異向量矩陣U：標準基向量的排列
-右奇異向量矩陣V：標準基向量的排列
-奇異值矩陣Σ：對角線為$\sqrt{3}, \sqrt{2}, 1$
-
-條件數：$\kappa = \frac{\sigma_{\text{max}}}{\sigma_{\text{min}}} = \frac{\sqrt{3}}{1} = \sqrt{3}$
-
-(b) 對於列向量：
-$$\begin{pmatrix}
--5 \\
-3
-\end{pmatrix}$$
-
-這是一個秩為1的矩陣，其SVD分解為：
-
-奇異值：$\sigma_1 = \sqrt{(-5)^2 + 3^2} = \sqrt{34}$
-
-左奇異向量U：單位化的向量本身，即$\begin{pmatrix} -5/\sqrt{34} \\ 3/\sqrt{34} \end{pmatrix}$
-
-右奇異向量V：標量1（因為是列向量）
-
-奇異值矩陣Σ：$\begin{pmatrix} \sqrt{34} \\ 0 \end{pmatrix}$
-
-條件數：由於只有一個非零奇異值，條件數在理論上是無窮大（因為最小奇異值為0），但對於實際計算，我們通常考慮非零奇異值的條件數，這裡是1（只有一個奇異值）。
