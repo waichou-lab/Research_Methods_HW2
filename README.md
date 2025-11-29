@@ -30,3 +30,4 @@ $\sigma = -\sqrt{2}$
 $\vec{v} = \vec{a}_2 - \sigma \vec{e}_1 = (1+\sqrt{2}, 1)^T$  
 2×2 反射矩陣：
 ![image](image/fg5.jpg)  
+擴展為 3×3 矩陣：  
