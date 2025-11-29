@@ -93,4 +93,47 @@ $u_2 = A e_2 / \sqrt{2} = (0, 1, 0)^T$
 
 $u_3 = A e_3 / 1 = (1, 0, 0)^T$  
 
-SVD 分解
+SVD 分解  
+![image](image/fg19.jpg)  
+條件數  
+![image](image/fg20.jpg)  
+(b) 矩陣 A  
+![image](image/fg21.jpg)  
+奇異值分解  
+$A^T A = [34]$，奇異值 $\sigma_1 = \sqrt{34}, \sigma_2 = 0$  
+
+右奇異向量：$V = [1]$  
+
+左奇異向量：  
+
+$u_1 = A / \sqrt{34} = \begin{pmatrix} -5/\sqrt{34} \ 3/\sqrt{34} \end{pmatrix}$  
+
+$u_2 = \begin{pmatrix} 3/\sqrt{34} \ 5/\sqrt{34} \end{pmatrix}$（正交向量）  
+
+SVD 分解  
+![image](image/fg22.jpg)  
+## 問題 7.10：潛在語義分析
+(a) 矩陣解釋  
+$XX^T$：$m \times m$ 矩陣，條目 $(i,j)$ 表示單詞 $i$ 和單詞 $j$ 在所有文檔中的共現次數之和，衡量單詞之間的相關性。  
+
+$X^T X$：$n \times n$ 矩陣，條目 $(i,j)$ 表示文檔 $i$ 和文檔 $j$ 的單詞向量的點積，衡量文檔之間的相似度。  
+
+(b) 最佳 k 維逼近  
+根據 Eckart-Young 定理，對 $X$ 進行 SVD：  
+![image](image/fg23.jpg)  
+保留前 $k$ 個奇異值，最佳逼近為：  
+![image](image/fg24.jpg)  
+其中 $U_k$ 是 $U$ 的前 $k$ 列，這些列向量是 $\mathbb{R}^m$ 中的 $k$ 個向量，在 Frobenius 範數下最好地逼近文檔空間。  
+
+(c) 典型相關分析  
+最大化：  
+![image](image/fg25.jpg)  
+令 $C = X_1 X_2^T$，計算 SVD：  
+![image](image/fg26.jpg)  
+解為：  
+
+$v_1 = U$ 的第一列  
+
+$v_2 = V$ 的第一列  
+
+最大值為 $\sigma_1$（最大奇異值）。  
