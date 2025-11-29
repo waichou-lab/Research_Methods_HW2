@@ -11,6 +11,3 @@
 **Solution:**
 
 From Example 5.2, the matrix is:
-A = [1 1 1]
-[0 1 1]
-[0 1 0]
