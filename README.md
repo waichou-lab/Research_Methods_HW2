@@ -45,3 +45,27 @@ Householder 方法和 Gram-Schmidt 方法得到的 QR 分解在數值上等價�
 (a) 矩陣平方根  
 對於對稱正定矩陣 $A$，存在特徵值分解：  
 ![image](image/fg10.jpg)  
+其中 $\Lambda$ 為對角矩陣，對角元素為正值特徵值。  
+定義平方根：  
+![image](image/fg11.jpg)  
+其中 $\sqrt{\Lambda}$ 為對角矩陣，對角元素為特徵值的平方根。  
+驗證：  
+![image](image/fg12.jpg)  
+Cholesky 分解 $A = LL^T$ 中的 $L$ 是下三角矩陣，而 $\sqrt{A}$ 是對稱矩陣，因此兩者不同。
+
+(b) 平方根的唯一性  
+對於對稱正定矩陣，平方根是唯一的，因為特徵值唯一且為正。  
+
+對於一般矩陣，平方根可能不唯一（例如，單位矩陣有 $I$ 和 $-I$ 作為平方根）。  
+
+(c) 矩陣指數  
+利用特徵值分解：  
+![image](image/fg13.jpg)  
+其中 $e^{\Lambda}$ 是對角矩陣，對角元素為 $e^{\lambda_i}$。  
+
+(d) 指數加法公式  
+若 $AB = BA$，則：  
+![image](image/fg14.jpg)  
+(e) ODE 求解  
+微分方程：  
+![image](image/fg15.jpg)  
