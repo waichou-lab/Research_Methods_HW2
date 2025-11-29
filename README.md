@@ -103,7 +103,7 @@ SVD 分解
 $A^T A = [34]$，奇異值 $\sigma_1 = \sqrt{34}, \sigma_2 = 0$  
 右奇異向量：V=[1]
 左奇異向量：
-![image](image/fg28.jpg)  
+![image](image/fg28.png)  
 
 SVD 分解  
 ![image](image/fg22.jpg)  
