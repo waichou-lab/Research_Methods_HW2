@@ -69,3 +69,28 @@ Cholesky 分解 $A = LL^T$ 中的 $L$ 是下三角矩陣，而 $\sqrt{A}$ 是對
 (e) ODE 求解  
 微分方程：  
 ![image](image/fg15.jpg)  
+解為：  
+![image](image/fg16.jpg)  
+由於 $A$ 正定，特徵值均大於零，當 $t \to \infty$ 時，$e^{-At} \to 0$，從而 $y(t) \to 0$。  
+## 問題 7.3：SVD 與條件數  
+(a) 矩陣 A  
+![image](image/fg17.jpg)  
+計算 $A^T A$  
+![image](image/fg18.jpg)  
+特徵值與奇異值  
+特徵值：$3, 2, 1$  
+
+奇異值：$\sigma_1 = \sqrt{3}, \sigma_2 = \sqrt{2}, \sigma_3 = 1$  
+
+奇異向量  
+右奇異向量：$V = I$（標準基）  
+
+左奇異向量：  
+
+$u_1 = A e_1 / \sqrt{3} = (0, 0, 1)^T$  
+
+$u_2 = A e_2 / \sqrt{2} = (0, 1, 0)^T$  
+
+$u_3 = A e_3 / 1 = (1, 0, 0)^T$  
+
+SVD 分解
