@@ -2,3 +2,4 @@
 ___________________________________  
 ## 問題 5.1：Householder QR 分解與 Gram-Schmidt 比較  
 ![image](image/A_matrix.png)
+$|\vec{a}_1| = 1$
